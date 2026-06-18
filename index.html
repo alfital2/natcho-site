@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Natcho · Notch? Nacho problem.</title>
 <meta name="description" content="Natcho is a fun little Mac app that hides your MacBook's camera notch behind a perfectly black menu bar. Crispy rounded corners optional. Zero permissions." />
-<meta property="og:title" content="Natcho — notch? nacho problem." />
+<meta property="og:title" content="Natcho · notch? nacho problem." />
 <meta property="og:description" content="A tiny Mac app that makes your MacBook notch disappear behind a true-black menu bar. Free, zero permissions." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -26,7 +26,7 @@
   html{scroll-behavior:smooth}
   body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.6;
     font-weight:600;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;min-height:100vh}
-  /* warm topping blobs — cheese / salsa / guac */
+  /* warm topping blobs: cheese / salsa / guac */
   body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
     background:
       radial-gradient(40vw 40vw at 12% -6%, rgba(255,178,0,.40), transparent 60%),
@@ -72,7 +72,6 @@
   .fine .apple-mini{width:12px;height:12px;fill:var(--ink);vertical-align:-1px;margin-right:3px}
   .fine .nz{color:var(--ink);font-weight:600}
   @media(max-width:600px){.fine{white-space:normal}}
-  /* "notarized by Apple" funny seal */
   /* offset anchor jumps for the sticky nav (so "Try it" doesn't hide under it) */
   #try{scroll-margin-top:92px}
 
@@ -92,7 +91,7 @@
   .strip{position:absolute;top:0;left:0;right:0;height:34px;background:#000;z-index:3;opacity:0;transition:opacity .45s ease}
   .screen.hidden .strip{opacity:1}
   /* the notch is a little character: sad when it's showing, then happily munching a
-     nacho when you hide it — after which it melts into the bar (clean black) */
+     nacho when you hide it, after which it melts into the bar (clean black) */
   .notchface{position:absolute;top:0;left:50%;transform:translateX(-50%);width:64px;height:24px;z-index:4;pointer-events:none;transition:opacity .35s}
   .notchface svg{width:100%;height:100%;overflow:visible}
   .eye{fill:#FFF3DA}
@@ -212,13 +211,13 @@
   <div class="wrap">
     <span class="tag"><svg viewBox="0 0 64 64"><use href="#ic-cheese"/></svg> a tiny mac app</span>
     <h1>Notch?<br><span class="cheese">Nacho problem.</span></h1>
-    <p class="sub">Natcho hides your MacBook's camera notch behind a <b>perfectly black</b> menu bar — even on macOS Tahoe's shiny Liquid Glass. Crispy corners optional. <b>Zero permissions.</b></p>
+    <p class="sub">Natcho hides your MacBook's camera notch behind a <b>perfectly black</b> menu bar, even on macOS Tahoe's shiny Liquid Glass. Crispy corners optional. <b>Zero permissions.</b></p>
     <div class="cta">
       <a class="btn" href="https://github.com/alfital2/natcho-site/releases/latest/download/Natcho.dmg" target="_blank" rel="noopener">
         <svg class="apple" viewBox="0 0 384 512"><path d="M318.7 268c-.3-37 16.4-65 50.1-85.6-18.9-27-47.5-41.9-85.1-44.8-35.7-2.8-74.8 20.9-89.1 20.9-15.1 0-49.7-19.9-76.9-19.9C71.2 138.9 16 178.9 16 260.4c0 24.1 4.4 49 13.2 74.6 11.8 33.9 54.4 117.1 98.8 115.7 23.2-.6 39.6-16.5 69.8-16.5 29.3 0 44.5 16.5 69.8 16.5 44.8-.6 83.4-76.2 94.6-110.2-60.1-28.3-56.9-82.9-56.9-84.7zM256.6 84.5c19.7-23.4 17.9-44.7 17.3-52.5-17.4 1-37.5 11.8-49 25.2-12.7 14.3-20.1 32-18.5 50.9 18.8 1.4 36.1-8.3 50.2-23.6z"/></svg>
-        Grab Natcho — free
+        Grab Natcho for free
       </a>
-      <span class="fine">free · macOS 13+ · 2 MB<svg class="nacho-sep" viewBox="0 0 28 28"><path d="M5 7 L23 9 L13 24 Z" fill="#FFC960" stroke="#3A2A17" stroke-width="2.6" stroke-linejoin="round"/></svg><svg class="apple-mini" viewBox="0 0 384 512"><path d="M318.7 268c-.3-37 16.4-65 50.1-85.6-18.9-27-47.5-41.9-85.1-44.8-35.7-2.8-74.8 20.9-89.1 20.9-15.1 0-49.7-19.9-76.9-19.9C71.2 138.9 16 178.9 16 260.4c0 24.1 4.4 49 13.2 74.6 11.8 33.9 54.4 117.1 98.8 115.7 23.2-.6 39.6-16.5 69.8-16.5 29.3 0 44.5 16.5 69.8 16.5 44.8-.6 83.4-76.2 94.6-110.2-60.1-28.3-56.9-82.9-56.9-84.7zM256.6 84.5c19.7-23.4 17.9-44.7 17.3-52.5-17.4 1-37.5 11.8-49 25.2-12.7 14.3-20.1 32-18.5 50.9 18.8 1.4 36.1-8.3 50.2-23.6z"/></svg><span class="nz">Notarized by Apple</span></span>
+      <span class="fine">free · macOS 13+ · 0.5 MB<svg class="nacho-sep" viewBox="0 0 28 28"><path d="M5 7 L23 9 L13 24 Z" fill="#FFC960" stroke="#3A2A17" stroke-width="2.6" stroke-linejoin="round"/></svg><svg class="apple-mini" viewBox="0 0 384 512"><path d="M318.7 268c-.3-37 16.4-65 50.1-85.6-18.9-27-47.5-41.9-85.1-44.8-35.7-2.8-74.8 20.9-89.1 20.9-15.1 0-49.7-19.9-76.9-19.9C71.2 138.9 16 178.9 16 260.4c0 24.1 4.4 49 13.2 74.6 11.8 33.9 54.4 117.1 98.8 115.7 23.2-.6 39.6-16.5 69.8-16.5 29.3 0 44.5 16.5 69.8 16.5 44.8-.6 83.4-76.2 94.6-110.2-60.1-28.3-56.9-82.9-56.9-84.7zM256.6 84.5c19.7-23.4 17.9-44.7 17.3-52.5-17.4 1-37.5 11.8-49 25.2-12.7 14.3-20.1 32-18.5 50.9 18.8 1.4 36.1-8.3 50.2-23.6z"/></svg><span class="nz">Notarized by Apple</span></span>
     </div>
 
     <!-- live demo -->
@@ -263,17 +262,17 @@
       <div class="card">
         <div class="badge" style="background:var(--queso)"><svg viewBox="0 0 64 64"><use href="#ic-cheese"/></svg></div>
         <h3>Black, not blurry</h3>
-        <p>Tahoe's glassy menu bar refuses to go truly black. Natcho paints its own pixels behind it, so the notch finally vanishes — no dark-wallpaper hack.</p>
+        <p>Tahoe's glassy menu bar refuses to go truly black. Natcho paints its own pixels behind it, so the notch finally vanishes. No dark-wallpaper hack.</p>
       </div>
       <div class="card">
         <div class="badge" style="background:#ffd0c6"><svg viewBox="0 0 64 64"><use href="#ic-chili"/></svg></div>
         <h3>Zero permissions</h3>
-        <p>No Screen Recording. No Accessibility. No nagging prompts. Natcho never peeks at your screen — it just covers the notch and gets out of the way.</p>
+        <p>No Screen Recording. No Accessibility. No nagging prompts. Natcho never peeks at your screen. It just covers the notch and gets out of the way.</p>
       </div>
       <div class="card">
         <div class="badge" style="background:#cdeab0"><svg viewBox="0 0 64 64"><use href="#ic-avocado"/></svg></div>
         <h3>Crispy corners</h3>
-        <p>Round off your screen corners — top <em>and</em> bottom. Multi-display aware, and it even floats above Mission Control so the notch stays gone.</p>
+        <p>Round off your screen corners, top <em>and</em> bottom. Multi-display aware, and it even floats above Mission Control so the notch stays gone.</p>
       </div>
     </div>
   </div>
@@ -286,7 +285,7 @@
     <div class="cta">
       <a class="btn" href="https://github.com/alfital2/natcho-site/releases/latest/download/Natcho.dmg" target="_blank" rel="noopener">
         <svg class="apple" viewBox="0 0 384 512"><path d="M318.7 268c-.3-37 16.4-65 50.1-85.6-18.9-27-47.5-41.9-85.1-44.8-35.7-2.8-74.8 20.9-89.1 20.9-15.1 0-49.7-19.9-76.9-19.9C71.2 138.9 16 178.9 16 260.4c0 24.1 4.4 49 13.2 74.6 11.8 33.9 54.4 117.1 98.8 115.7 23.2-.6 39.6-16.5 69.8-16.5 29.3 0 44.5 16.5 69.8 16.5 44.8-.6 83.4-76.2 94.6-110.2-60.1-28.3-56.9-82.9-56.9-84.7zM256.6 84.5c19.7-23.4 17.9-44.7 17.3-52.5-17.4 1-37.5 11.8-49 25.2-12.7 14.3-20.1 32-18.5 50.9 18.8 1.4 36.1-8.3 50.2-23.6z"/></svg>
-        Grab Natcho — free
+        Grab Natcho for free
       </a>
     </div>
   </div>
