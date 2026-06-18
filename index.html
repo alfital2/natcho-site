@@ -123,7 +123,8 @@
     transition:transform .14s,box-shadow .14s}
   .card:hover{transform:translate(-2px,-3px);box-shadow:7px 9px 0 var(--ink)}
   .badge{width:52px;height:52px;border-radius:15px;border:3px solid var(--ink);display:grid;place-items:center;
-    font-size:25px;margin-bottom:16px;box-shadow:3px 3px 0 var(--ink)}
+    margin-bottom:16px;box-shadow:3px 3px 0 var(--ink)}
+  .badge svg{width:32px;height:32px;display:block}
   .card h3{font-family:var(--disp);font-weight:600;font-size:20px;margin-bottom:7px}
   .card p{color:var(--ink-soft);font-size:15.5px;line-height:1.55}
 
@@ -134,21 +135,47 @@
   footer{padding:40px 0 56px;text-align:center}
   .foot-in{font-family:var(--disp);font-weight:500;color:var(--ink-soft);font-size:14.5px}
   .foot-in a{color:var(--cheese-deep);font-weight:600}
-  /* floaty chips */
-  .chip{position:fixed;z-index:-1;font-size:42px;opacity:.5;filter:saturate(1.1);animation:bob 6s ease-in-out infinite}
-  .chip.c1{top:18vh;left:5vw;transform:rotate(-18deg);animation-delay:0s}
-  .chip.c2{top:62vh;right:6vw;transform:rotate(14deg);animation-delay:1.4s}
-  .chip.c3{bottom:10vh;left:9vw;transform:rotate(8deg);animation-delay:2.6s}
+  /* floaty icons */
+  .chip{position:fixed;z-index:-1;width:54px;height:54px;opacity:.95;animation:bob 6s ease-in-out infinite}
+  .chip svg{width:100%;height:100%;display:block}
+  .chip.c1{top:17vh;left:5vw;transform:rotate(-16deg);animation-delay:0s}
+  .chip.c2{top:62vh;right:6vw;transform:rotate(12deg);animation-delay:1.4s}
+  .chip.c3{bottom:11vh;left:9vw;transform:rotate(8deg);animation-delay:2.6s}
   @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -14px}}
   @media(max-width:680px){.chip{display:none}}
   @media(prefers-reduced-motion:reduce){.chip{animation:none}}
+  .tag svg{width:18px;height:18px;display:block}
 </style>
 </head>
 <body>
 
-<span class="chip c1">🌮</span>
-<span class="chip c2">🧀</span>
-<span class="chip c3">🌶️</span>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="ic-cheese" viewBox="0 0 64 64">
+    <path d="M7 47 L45 15 L58 31 L19 51 Z" fill="#FFC53D" stroke="#3A2A17" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M45 15 L58 31 L50 33 L39 20 Z" fill="#FFD66B" stroke="#3A2A17" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="29" cy="40" r="3" fill="#FFF1B8" stroke="#3A2A17" stroke-width="2.5"/>
+    <circle cx="40" cy="35" r="2.4" fill="#FFF1B8" stroke="#3A2A17" stroke-width="2.5"/>
+    <circle cx="21" cy="45.5" r="1.7" fill="#3A2A17"/>
+  </symbol>
+  <symbol id="ic-chili" viewBox="0 0 64 64">
+    <path d="M41 19 C 54 24 56 41 44 50 C 36 56 25 56 20 50 C 16 45 21 40 27 42 C 36 45 40 36 37 27 C 36 23 38 21 41 19 Z" fill="#FF5A3C" stroke="#3A2A17" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M41 19 C 42 12 48 10 53 13" fill="none" stroke="#69B33B" stroke-width="5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="ic-taco" viewBox="0 0 64 64">
+    <path d="M8 35 A24 24 0 0 1 56 35 Z" fill="#FFC960" stroke="#3A2A17" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M13 34 q5 -10 10 -2 q5 -10 10 -2 q5 -10 10 -2" fill="none" stroke="#69B33B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="26" cy="31" r="3" fill="#FF5A3C" stroke="#3A2A17" stroke-width="2.5"/>
+    <circle cx="40" cy="31" r="3" fill="#FF5A3C" stroke="#3A2A17" stroke-width="2.5"/>
+  </symbol>
+  <symbol id="ic-avocado" viewBox="0 0 64 64">
+    <path d="M32 7 C 44 7 50 21 48 36 C 46 50 40 58 32 58 C 24 58 18 50 16 36 C 14 21 20 7 32 7 Z" fill="#69B33B" stroke="#3A2A17" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M32 16 C 41 16 45 26 43.5 36 C 42 47 37 52 32 52 C 27 52 22 47 20.5 36 C 19 26 23 16 32 16 Z" fill="#E4F2C6"/>
+    <circle cx="32" cy="38" r="8" fill="#A06A38" stroke="#3A2A17" stroke-width="3"/>
+  </symbol>
+</defs></svg>
+<span class="chip c1"><svg viewBox="0 0 64 64"><use href="#ic-taco"/></svg></span>
+<span class="chip c2"><svg viewBox="0 0 64 64"><use href="#ic-cheese"/></svg></span>
+<span class="chip c3"><svg viewBox="0 0 64 64"><use href="#ic-chili"/></svg></span>
 
 <nav>
   <div class="wrap nav-in">
@@ -163,7 +190,7 @@
 <div id="top"></div>
 <header>
   <div class="wrap">
-    <span class="tag">🧀 a tiny mac app</span>
+    <span class="tag"><svg viewBox="0 0 64 64"><use href="#ic-cheese"/></svg> a tiny mac app</span>
     <h1>Notch?<br><span class="cheese">Nacho problem.</span></h1>
     <p class="sub">Natcho hides your MacBook's camera notch behind a <b>perfectly black</b> menu bar — even on macOS Tahoe's shiny Liquid Glass. Crispy corners optional. <b>Zero permissions.</b></p>
     <div class="cta">
@@ -205,17 +232,17 @@
     <div class="fh"><h2>Loaded with the good stuff.</h2></div>
     <div class="grid">
       <div class="card">
-        <div class="badge" style="background:var(--queso)">🧀</div>
+        <div class="badge" style="background:var(--queso)"><svg viewBox="0 0 64 64"><use href="#ic-cheese"/></svg></div>
         <h3>Black, not blurry</h3>
         <p>Tahoe's glassy menu bar refuses to go truly black. Natcho paints its own pixels behind it, so the notch finally vanishes — no dark-wallpaper hack.</p>
       </div>
       <div class="card">
-        <div class="badge" style="background:#ffd0c6">🌶️</div>
+        <div class="badge" style="background:#ffd0c6"><svg viewBox="0 0 64 64"><use href="#ic-chili"/></svg></div>
         <h3>Zero permissions</h3>
         <p>No Screen Recording. No Accessibility. No nagging prompts. Natcho never peeks at your screen — it just covers the notch and gets out of the way.</p>
       </div>
       <div class="card">
-        <div class="badge" style="background:#cdeab0">🥑</div>
+        <div class="badge" style="background:#cdeab0"><svg viewBox="0 0 64 64"><use href="#ic-avocado"/></svg></div>
         <h3>Crispy corners</h3>
         <p>Round off your screen corners — top <em>and</em> bottom. Multi-display aware, and it even floats above Mission Control so the notch stays gone.</p>
       </div>
@@ -225,7 +252,7 @@
 
 <section class="close">
   <div class="wrap">
-    <h2>Say bye to the notch. 👋</h2>
+    <h2>Say bye to the notch.</h2>
     <p>It was never invited to the party anyway.</p>
     <div class="cta">
       <a class="btn" href="https://github.com/alfital2/Natcho/releases/latest" target="_blank" rel="noopener">
