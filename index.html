@@ -90,6 +90,14 @@
     background:#000;border-radius:0 0 13px 13px;z-index:2}
   .strip{position:absolute;top:0;left:0;right:0;height:36px;background:#000;z-index:3;opacity:0;transition:opacity .45s ease}
   .screen.hidden .strip{opacity:1}
+  /* with the notch hidden + corners on, round the screen content's top corners under
+     the black bar — black corner-fills that blend with the bar, exactly like the app.
+     Only in the hidden state: when the notch shows there's no black bar to blend with. */
+  .crnr{position:absolute;top:34px;width:18px;height:18px;background:#000;z-index:4;opacity:0;
+    transition:opacity .45s ease;pointer-events:none}
+  .crnr.tl{left:0;-webkit-mask:radial-gradient(18px at 100% 100%,transparent 98%,#000 100%);mask:radial-gradient(18px at 100% 100%,transparent 98%,#000 100%)}
+  .crnr.tr{right:0;-webkit-mask:radial-gradient(18px at 0 100%,transparent 98%,#000 100%);mask:radial-gradient(18px at 0 100%,transparent 98%,#000 100%)}
+  .screen.hidden.rounded .crnr{opacity:1}
   /* the notch is a little character: sad when it's showing, then happily munching a
      nacho when you hide it, after which it melts into the bar (clean black) */
   .notchface{position:absolute;top:0;left:50%;transform:translateX(-50%);width:64px;height:24px;z-index:4;pointer-events:none;transition:opacity .35s}
@@ -244,6 +252,8 @@
             </div>
             <div class="seg r"><svg class="mb-nacho" viewBox="0 0 28 28"><path d="M5 7 L23 9 L13 24 Z" fill="#FFC960" stroke="#3A2A17" stroke-width="2.6" stroke-linejoin="round"/></svg><span class="ic"></span><span>100%</span><span>9:41</span></div>
           </div>
+          <div class="crnr tl"></div>
+          <div class="crnr tr"></div>
         </div>
         <span class="arrow al"><svg viewBox="0 0 64 70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 62 C 6 34 22 16 52 14"/><path d="M38 9 L 54 13 L 49 29"/></svg></span>
         <span class="arrow ar"><svg viewBox="0 0 64 70" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 62 C 6 34 22 16 52 14"/><path d="M38 9 L 54 13 L 49 29"/></svg></span>
