@@ -70,13 +70,16 @@
   .fine{margin-top:15px;font-family:var(--disp);font-weight:500;font-size:14px;color:var(--ink-soft)}
   /* "notarized by Apple" funny seal */
   .seal{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:var(--card);
-    border:3px solid var(--ink);border-radius:14px;padding:8px 16px 8px 12px;box-shadow:3px 4px 0 var(--ink);
-    transform:rotate(-2deg);font-family:var(--disp);font-weight:600;font-size:14.5px;text-align:left}
+    border:3px solid var(--ink);border-radius:14px;padding:8px 18px 8px 12px;box-shadow:3px 4px 0 var(--ink);
+    transform:rotate(-1.5deg);font-family:var(--disp);font-weight:700;font-size:14.5px;white-space:nowrap}
   .seal .chk{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;
     background:var(--guac);border:2.5px solid var(--ink)}
   .seal .chk svg{width:13px;height:13px;stroke:#fff;stroke-width:3.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
-  .seal .apple-mini{width:14px;height:14px;fill:var(--ink);vertical-align:-2px;margin-right:3px}
-  .seal small{display:block;font-family:var(--body);font-weight:600;font-size:11.5px;color:var(--ink-soft)}
+  .seal .apple-mini{width:14px;height:14px;fill:var(--ink);vertical-align:-2px;margin-right:4px}
+  .seal small{font-family:var(--body);font-weight:600;font-size:12.5px;color:var(--ink-soft);margin-left:5px}
+  @media(max-width:560px){.seal{white-space:normal;font-size:12.5px}}
+  /* offset anchor jumps for the sticky nav (so "Try it" doesn't hide under it) */
+  #try{scroll-margin-top:92px}
 
   /* demo */
   .stage{margin:52px auto 0;max-width:720px}
@@ -224,7 +227,7 @@
     <p class="fine">free forever · macOS 13+ · about 2 MB</p>
     <div class="seal">
       <span class="chk"><svg viewBox="0 0 24 24"><path d="M5 13l4 4 10-11"/></svg></span>
-      <span><svg class="apple-mini" viewBox="0 0 384 512"><path d="M318.7 268c-.3-37 16.4-65 50.1-85.6-18.9-27-47.5-41.9-85.1-44.8-35.7-2.8-74.8 20.9-89.1 20.9-15.1 0-49.7-19.9-76.9-19.9C71.2 138.9 16 178.9 16 260.4c0 24.1 4.4 49 13.2 74.6 11.8 33.9 54.4 117.1 98.8 115.7 23.2-.6 39.6-16.5 69.8-16.5 29.3 0 44.5 16.5 69.8 16.5 44.8-.6 83.4-76.2 94.6-110.2-60.1-28.3-56.9-82.9-56.9-84.7zM256.6 84.5c19.7-23.4 17.9-44.7 17.3-52.5-17.4 1-37.5 11.8-49 25.2-12.7 14.3-20.1 32-18.5 50.9 18.8 1.4 36.1-8.3 50.2-23.6z"/></svg>Notarized by Apple<small>opens clean — no "unidentified developer" drama</small></span>
+      <span><svg class="apple-mini" viewBox="0 0 384 512"><path d="M318.7 268c-.3-37 16.4-65 50.1-85.6-18.9-27-47.5-41.9-85.1-44.8-35.7-2.8-74.8 20.9-89.1 20.9-15.1 0-49.7-19.9-76.9-19.9C71.2 138.9 16 178.9 16 260.4c0 24.1 4.4 49 13.2 74.6 11.8 33.9 54.4 117.1 98.8 115.7 23.2-.6 39.6-16.5 69.8-16.5 29.3 0 44.5 16.5 69.8 16.5 44.8-.6 83.4-76.2 94.6-110.2-60.1-28.3-56.9-82.9-56.9-84.7zM256.6 84.5c19.7-23.4 17.9-44.7 17.3-52.5-17.4 1-37.5 11.8-49 25.2-12.7 14.3-20.1 32-18.5 50.9 18.8 1.4 36.1-8.3 50.2-23.6z"/></svg>Notarized by Apple<small>— opens clean, no "unidentified developer" drama</small></span>
     </div>
 
     <!-- live demo -->
